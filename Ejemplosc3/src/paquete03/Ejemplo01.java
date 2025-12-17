@@ -10,54 +10,51 @@ package paquete03;
  * @author reroes
  */
 public class Ejemplo01 {
-    
+
     public static void main(String[] args) {
-        double[][] notas = {{9, 10, 7, 8}, 
-                            {10, 5, 7, 9}, 
-                            {7, 9.4, 10, 9}};
+        double[][] notas = {{9, 10, 7, 8},
+        {10, 5, 7, 9},
+        {7, 9.4, 10, 9}};
         String[] nombresEstudiante = {"Jose A", "Elena J", "Paúl L"};
         double[] sumaNotas = new double[3];
         String[] notasCualitativas = new String[3];
-        
+
         // 0 - 5.9 Bueno
         // 6 - 8.9 Muy Bueno
         // 9 - 10 Sobresaliente
-                    
         double suma;
         double[] promedio = new double[3];
         String reporte = "";
-        
+
         for (int i = 0; i < notas.length; i++) { // 0<3
             suma = 0; // 0
             for (int j = 0; j < notas[i].length; j++) { // 0<notas[0].length
-                                                        // 0<4 // 1<4 // 2<4 // 3<4 // 4<4
+                // 0<4 // 1<4 // 2<4 // 3<4 // 4<4
                 suma = suma + notas[i][j];
-                
-                     // 0 + notas[0][0] // 0 + 9 // 9
-                     // 9 + notas[0][1] // 9 + 10 // 19
-                     // 19 + notas[0][2] // 19 + 7 // 26
-                     // 26 + notas[0][3] // 26 + 8 // 34
+
+                // 0 + notas[0][0] // 0 + 9 // 9
+                // 9 + notas[0][1] // 9 + 10 // 19
+                // 19 + notas[0][2] // 19 + 7 // 26
+                // 26 + notas[0][3] // 26 + 8 // 34
             }
             sumaNotas[i] = suma;
-            
+
             promedio[i] = suma / notas[i].length;
-            if(promedio[i] >= 0 && promedio[i] < 6){
+            if (promedio[i] >= 0 && promedio[i] < 6) {
                 notasCualitativas[i] = "Bueno";
-            }else{
-                if(promedio[i] >= 6 && promedio[i] < 9){
+            } else {
+                if (promedio[i] >= 6 && promedio[i] < 9) {
                     notasCualitativas[i] = "Muy bueno";
-                }else{
-                    if(promedio[i] >= 9 && promedio[i] <= 10){
+                } else {
+                    if (promedio[i] >= 9 && promedio[i] <= 10) {
                         notasCualitativas[i] = "Sobresaliente";
-                          
-                }else{
+
+                    } else {
                         notasCualitativas[i] = "fuera de rango";
                     }
-                        
-                    }
-                
+                }
             }
-        
+
         }
         // Presentación de resultados
         for (int i = 0; i < nombresEstudiante.length; i++) {
@@ -69,8 +66,8 @@ public class Ejemplo01 {
                     promedio[i],
                     notasCualitativas[i]);
         }
-        
+
         System.out.printf("%s\n", reporte);
-        
+
     }
 }
