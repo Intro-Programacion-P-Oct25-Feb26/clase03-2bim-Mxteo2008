@@ -15,16 +15,16 @@ public class Ejercicio {
         double produccionValor;
         String reporte = String.format("Análisis de Producción\n");
 
-        // Entrada de datos
+     
         for (int i = 0; i < produccion.length; i++) {
             System.out.printf("Ingrese el nombre del encargado de la estación "
-                    + "%d:%n", i + 1);
+                    + "%d:\n", i + 1);
             nombre = entrada.nextLine();
             nombres[i] = nombre;
 
             for (int j = 0; j < produccion[i].length; j++) {
                 System.out.printf("Mes %d - Ingrese la producción en "
-                        + "dólares:%n", j + 1);
+                        + "dólares:\n", j + 1);
                 produccionValor = entrada.nextDouble();
                 produccion[i][j] = produccionValor;
             }
